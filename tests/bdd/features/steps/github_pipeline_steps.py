@@ -4,8 +4,9 @@ from behave import given, when, then
 @given('o workflow chama "{filename}"')
 def step_given_workflow_file(context, filename):
     # Ajustando para o caminho correto do arquivo
-    context.filename = os.path.join("../", "../","github", "workflows", filename)
-    
+    # context.filename = os.path.join("../", "../","github", "workflows", filename)
+    context.filename = "C:\git\aplicando-testes\.github\workflows\deploy.yml"
+
     print(f"Procurando arquivo em: {context.filename}")
     assert os.path.exists(context.filename), f"Arquivo {context.filename} não encontrado."
 
